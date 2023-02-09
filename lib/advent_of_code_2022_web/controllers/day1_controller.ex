@@ -5,8 +5,8 @@ defmodule AocWeb.Day1Controller do
     render(conn, "index.html")
   end
 
-  def show(conn, params) do
-    render(conn, "show.html", [output: params["input"]["for"]])
+  def show(conn, %{"input" => %{"for" => input}}) do
+    render(conn, "show.html", [output: input])
   end
 
 end
